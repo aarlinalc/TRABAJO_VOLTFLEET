@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cargador"
+    tools:context=".LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLogo"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_voltfleet" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLogin"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="12dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardLogo"> <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acceso VoltFleet"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#E67E22"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etDni"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="DNI"
+            android:paddingStart="15dp"
+            android:background="@drawable/input_redondeado"
+            android:layout_marginBottom="15dp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:paddingStart="15dp"
+            android:background="@drawable/input_redondeado"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnAcceder"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="CONFIRMAR"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#E67E22"
+            android:textSize="16sp"
+            android:onClick="Hacer_peticion_REST" />
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
